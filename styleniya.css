@@ -1,0 +1,153 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+main {
+  flex: 1; /* pushes footer down */
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+} 
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: lightgray;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  background: #0055a5;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.page {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0055a5;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.locker {
+  background: green;
+  color: white;
+  padding: 30px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.locker.occupied {
+  background: red;
+}
+.department-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.department-list li {
+  margin: 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 120px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.locker {
+  background: green;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.locker.occupied {
+  background: red;
+}

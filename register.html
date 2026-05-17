@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="styleniya.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header><h1>Locker Management System</h1></header>
+    <nav>
+      <ul>
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="rentals.html">Rentals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Register</h2>
+      <form onsubmit="registerUser(event)">
+        <label>Student ID (XX-XXXX):</label><br>
+        <input type="text" id="studentId" pattern="^[0-9]{2}-[0-9]{4}$" required><br><br>
+
+        <label>Last Name:</label><br>
+        <input type="text" id="lastName" required><br><br>
+
+        <label>Middle Name: (N/A if none)</label><br>
+        <input type="text" id="middleName"><br><br>
+
+        <label>First Name:</label><br>
+        <input type="text" id="firstName" required><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password" required><br><br>
+
+        <label>Role:</label><br>
+        <select id="role" required>
+          <option value="student">Student</option>
+          <option value="admin">Admin</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+      </form>
+    </main>
+    <footer><p>&copy; 2026 Locker Management System</p></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

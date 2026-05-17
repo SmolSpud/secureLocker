@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Locker Management System</title>
+    <style>
+        body { font-family: Arial; background:#222; color:#eee; text-align:center; }
+        .grid { display:grid; grid-template-columns:repeat(5,100px); gap:10px; justify-content:center; }
+        .locker { height:60px; display:flex; align-items:center; justify-content:center;
+                  color:white; font-weight:bold; border-radius:5px; }
+        .available { background:green; cursor:pointer; }
+        .occupied { background:red; }
+    </style>
+</head>
+<body>
+    <h2>Locker Grid</h2>
+    <?php
+    include("db.php");
+    $department = $_GET['dept'] ?? 'CEIT';
+    $floor = $_GET['floor'] ?? 1;
+
+    $sql = "SELECT id, status FROM lockers WHERE department=? AND floor=? ORDER BY id";
+    $params = [$department, $floor];
+    $stmt = sqlsrv_query($conn, $sql, $params);
+
+    echo "<div class='grid'>";
+    while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+        $class = ($row['status'] === 'available') ? 'available' : 'occupied';
+        echo "<div class='locker $class'>Locker {$row['id']}</div>";
+    }
+    echo "</div>";
+    ?>
+</body>
+</html>
